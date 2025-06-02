@@ -8,6 +8,11 @@ describe('Sign In tests with POM', () => {
         HomePage.openSignInForm();
     });
 
+    it.only('Sign in using commands', () => {
+        cy.login('michael.krasnovskyi+testUser1@gmail.com', 'ZSgeVQhuU3qkvlG');
+        cy.get('h1').should('have.text', 'Garage');
+    });
+
     it('Successful sign in', () => {
         SignInForm.loginWithCredentials('michael.krasnovskyi+testUser1@gmail.com', 'ZSgeVQhuU3qkvlG');
         cy.get('h1').should('have.text', 'Garage');
