@@ -51,6 +51,7 @@ describe('Search elements', () => {
         // cy.get('.hero-descriptor').invoke('show');
         // cy.wait(4000);
         cy.get('h1').invoke('attr', 'class').should('contain', 'hero-descriptor_title');
+        cy.get('').click({ timeout: 20000 })
     })
 
     it('then', () => {
